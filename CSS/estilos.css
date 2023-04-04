@@ -1,0 +1,115 @@
+:root{
+    --lavanda:#c4c0e2;
+    --lavand:#b9b4de;
+    --lilaprimavera:#c8b7d6;
+    --blanco: #fff;
+    --fuente:'Quicksand', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+
+body{
+    font-family: var(--fuente);
+    background-color: var(--blanco);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+
+.imagen-formulario{
+    background-image: url('../imagenes/lavanda.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    flex: 0 0 calc(60%);
+    position: relative;
+    
+}
+.imagen-formulario::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@media(min-width:768px){
+    .contenedor-formulario{
+        display: flex;
+    
+    }
+}
+@media(min-width:768px){
+    .imagen-formulario{
+        height: auto;
+        background-position: right;
+    }
+}
+@media(min-width:1200px){
+    .imagen-formulario{
+        background-position: ccenter;
+    }
+}
+.formulario{
+    padding: 50px;
+    background-color: var(--lilaprimavera);
+}
+.texto-formulario h2, .input label, .password-olvidada a, .texto-formulario p{
+    color: var(--blanco);
+
+}
+.texto-formulario h2{
+    font-size: 40px;
+    text-align: center;
+}
+.texto-formulario p{
+    font-size: 22px;
+    text-align: center;
+}
+.input label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+
+}
+.input input{
+    width: 100%;
+    padding: 10px 10px;
+     border-radius: 5px;
+     outline: none;
+
+}
+.input input [type="submit"]{
+    background-color: var(--lavanda);
+    color: var(--blanco);
+    font-size: 23px;
+    font-weight:bold ;
+    border: none;
+    margin-top: 20px;
+    transition: background-color .4s ease-in-out;
+}
+.input input [type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--lavanda);
+
+}
+.password-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 22px;
+
+}
